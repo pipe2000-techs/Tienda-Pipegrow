@@ -1,0 +1,19 @@
+AddDefaultCharset utf-8
+#Options All -Indexes
+RewriteEngine On
+# Bloqueo de Directorios
+RewriteRule (^|/)class(/|$) - [F]
+#bloqueo de archivos
+<Files .htaccess>
+Order allow,deny
+Deny from all
+</Files>
+
+
+#Opciones de Inico
+RewriteRule ^cart$  ./carrito.php
+RewriteRule ^contact$ ./contacto.php
+RewriteRule ^store$   ./tienda.php   
+RewriteRule ^data$   ./datos.php
+RewriteRule ^ThankYou$  ./gracias.php
+
